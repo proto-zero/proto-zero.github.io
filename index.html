@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sean Lenhart - Developer</title>
+    <%= favicon_link_tag asset_path('headshot.jpg') %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- Welcome Screen -->
+    <div class="section intro">
+      <div class="header my_name">
+        <div id="introduction">
+          <h1>Sean Lenhart</h1>
+        </div>
+        <div>
+          <p><a href="https://github.com/proto-zero" target="_blank">GitHub</a> -
+            <a href="https://www.linkedin.com/in/sean-lenhart-32974620b/" target="_blank">LinkedIn</a> -
+            <a href="https://twitter.com/SeanLenhart" target="_blank">Twitter</a> -
+            theseanlenhart at gmail dot com</p>
+        </div>
+      </div>
+      <div class="main_container">
+        <div class="img_container">
+          <%= image_tag("headshot.jpg", :class => "headshot") %>
+          <!-- <div class="toc">
+            <h2>Table Of Contents</h2>
+            <p><a href="#rpg"><strong>Battle Fantasy</strong></a> - RPG Battle System</p>
+            <p><a href="#gb"><strong>Garden Box</strong></a> - CyberPunk Garden Box</p>
+            <p><a href="#system"><strong>Starship Bridge</strong></a> - Starship Bridge Simulator</p>
+          </div> -->
+        </div>
+        <div class="text bio">
+          <h2>Hi, I'm Sean</h2>
+          <p>I am a <strong>Software Developer</strong>, and a <strong>Professional Actor</strong>.</p><br>
+          <p>I like to build things: Plays, Characters, Programs, Websites.</p>
+          <p>I like to communicate with an audience, to interact with other players, to find interesting and unique ways to solve problems.</p><br>
+          <div class="magic_container">In other words, I have a strong desire to <div class="magic"><em>express myself.</em></div></div><br>
+          <p>Let me take you through some of the Projects I have created while attending Academy Pittsburgh and learning the Ruby Programming Language. If you want to dive right into my github you can do so <a href="https://github.com/proto-zero" target="_blank">here</a>. </p><br>
+        </div>
+      </div>
+    </div>
+
+    <!-- RPG -->
+    <!-- Section: Top -->
+    <div class="section rpg">
+      <div class="header rpg_title">
+        <h1 id="rpg"><a href="https://github.com/proto-zero/Battle_Fantasy" target="_blank">Battle Fantasy</a></h1>
+        <p> RPG Battle System</p>
+      </div>
+      <div class="main_container">
+        <div class="img_container">
+          <%= image_tag("battle_start.png", :class => "battle start term") %>
+          <%= image_tag("battle_maxscreen.png", :class => "battle maxscreen term") %>
+        </div>
+        <div class="text rpg_description">
+          <p><a href="https://github.com/proto-zero/Battle_Fantasy" target="_blank">Battle Fantasy</a> is what happens when you play Final Fantasy X during breaks in Academy Pittsburgh.</p><br>
+          <%= image_tag("ffxmenu.png", :class => "ffxmenu") %><br>
+          <p>In most turn-based role-playing-games, when you encounter an enemy, you are given a menu that includes things like health, status, and a list of actions that you can perform.</p><br>
+          <p>I find I enjoy creating menus in the terminal; trying to create a loop that changes just enough to modify the menu but not break it. I enjoy the illusion of making a repeating set of strings that looks like a static page.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Game Screen Layout -->
+    <div class="section rpg">
+      <div class="main_container">
+        <div class="text rpg_description">
+          <div class="subject">
+            <p><strong>Game Screen Layout</strong></p><br>
+          </div>
+          <p>For this project I started with creating the menu screen.</p><br>
+          <p>I interpolated the variables into the strings to help with the spacing on the screen. Ending the screen using print allowed the user input to appear, rather than beneath the menu, in the same line as ACTION. It gives the user a sense that they are typing inside the program instead of manipulating it from the outside.</p><br>
+          <p>The menu has been refined as more features have been added. Having it exist as its own method made implementing changes easy to track inside the code stack.</p>
+        </div>
+        <div class="img_container">
+          <%= image_tag("battle_gamescreenlayout.png", :class => "battle gamescreenlayout code") %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Game Logic -->
+    <div class="section rpg">
+      <div class="main_container">
+        <div class="img_container">
+          <%= image_tag("battle_gamelogic.png", :class => "battle gamelogic code") %>
+        </div>
+        <div class="text rpg_description">
+          <div class="subject">
+            <p><strong>Game Logic</strong></p><br>
+          </div>
+          <p>The loop itself is rather clean:</p>
+          <ul>
+            <li>First we run the screen method which includes <code>system("clear")</code> to keep the menu in its position.</li><br>
+            <li><code>@defense</code> is reset to zero.</li><br>
+            <li>The user input is accepted and set to downcase. Whatever they choose activates the appropriate method (attack, defend, magic). If their choice isn't recognized their turn is effectively skipped.</li><br>
+            <li>If the player has dealt enough damage to the enemy (or runs away) the <code>@status</code> text is replaced accordingly. This screen lasts for 2.5 seconds before cutting to the Game Over and Credit Scren.</li><br>
+            <li>The enemy takes their turn to attack the player.</li><br>
+            <li>If the enemy deals enough damage to the player then the game ends</li><br>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Player Turn - Attack -->
+    <div class="section rpg">
+      <div class="main_container">
+        <div class="text rpg_description">
+          <div class="subject">
+            <p><strong>Attack</strong></p><br>
+          </div>
+          <p>On the player's turn they have four options: Attack, Defend, Magic, or Run Away.</p><br>
+          <p>When the player chooses to attack the attack method is called. It picks a random number between 0 and 99.</p><br>
+          <p>If the attack number is less than 70 than the attack is successful and a damage variable is created. This is also a random number between 1 and 5. This amount is subtracted from the Enemy Health variable</p><br>
+          <p>If the attack number is less than 18 then it is a critical hit and deals more damage than normal, between 6 and 10.</p><br>
+          <p>Any attack numbers above 70 miss and the enemy does not take damage.</p>
+        </div>
+        <div class="img_container">
+          <%= image_tag("battle attack", :class => "battle attack code") %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Player Turn - Defend -->
+    <div class="section rpg">
+      <div class="main_container">
+        <div class="text rpg_description">
+          <div class="subject">
+            <p><strong>Defend</strong></p><br>
+          </div>
+          <p>If the player chooses to defend then the defense method is called and a defense number is randomly chosen</p><br>
+          <p>90% of the time the player will successfully defend, and a defense variable will populate with a random number between 2 and 4. This number will be deducted from any damage the enemy deals later in the turn. It is then reset back to 0 at the beginning of the loop.</p><br>
+          <p>Of course, defending against an attack can be dangerous, and there is a small chance that the player will stumble, leaving themselves vulnerable to attack. The defense variable is automatically set to -5 which will increase any enemy damage.</p>
+        </div>
+        <div class="img_container">
+          <%= image_tag("battle defend", :class => "battle defend code") %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Player Turn - Magic -->
+    <div class="section rpg">
+      <div class="main_container">
+        <div class="text rpg_description">
+          <div class="subject">
+            <p><strong>Magic</strong></p><br>
+          </div>
+            <p>If the player chooses magic they will have to choose which spell to cast: Fire, Lightning, or Heal.</p><br>
+            <p>Using an each loop, the spells are listed for the player to choose by selecting the corresponding number.</p>
+            <ul>
+              <li>Fire burns the enemy, dealing 2 damage for 2 rounds.</li><br>
+              <li>Lightning stuns the enemy, decreasing the amount of damage they can deal to the player for 2 turns.</li><br>
+              <li>Heal restores a random amount of health to the player's health variable.</li>
+            </ul>
+            <p>The healing number is added to a player_hp variable, which is compared to the starting maximum health of the player. If player_hp exceeds the starting health, then the total health refreshed is capped at the maximum amount.</p>
+          </div>
+        <div class="img_container">
+          <%= image_tag("battle magic", :class => "battle player_magic code") %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Enemy Turn - Status Effects -->
+    <div class="section rpg">
+      <div class="main_container">
+        <div class="img_container">
+          <%= image_tag("status_effects.png", :class => "battle status_effect code") %>
+        </div>
+        <div class="text rpg_description">
+          <div class="subject">
+            <p><strong>Enemy Turn - Status Effects</strong></p><br>
+          </div>
+          <p>Before the enemy gets a chance to attack it must check for any status effects from player magic attacks like burning or electrified.</p><br>
+          <p>The burn or elec variables are increased by 2 each time they are cast. This number is checked and if it is above 0 the appropriate status is applied to the enemy. In this way a magic attack can last multiple turns.</p>
+          <ul>
+            <li>Burn reduces the enemy health by 2 points.</li><br>
+            <li>Elec increases the player defense variable by 2</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Map Overview -->
+    <div class="section rpg">
+      <div class="main_container">
+        <div class="text rpg_description">
+          <div class="subject">
+            <p><strong>World Map</strong></p><br>
+          </div>
+          <p>Once I had the combat section up and running I decided to create a Map the player could move around.</p><br>
+          <p>The player, represented by the X, starts in the middle. An enemy @ is both placed and moves randomly.</p><br>
+          <p>If you can catch the enemy then the game calls the battle menu class and shifts to the combat described above.</p><br>
+        </div>
+        <div class="img_container">
+          <%= image_tag("map_start", :class => "battle map_start term") %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Map Overview - Setup -->
+    <div class="section rpg">
+      <div class="main_container">
+        <div class="img_container">
+          <%= image_tag("map_setup.png", :class => "battle map_setup code") %>
+        </div>
+        <div class="text rpg_description">
+          <div class="subject">
+            <p><strong>Creating the Map - Setup</strong></p><br>
+          </div>
+          <p>The map is created by using a nested loop:</p>
+          <ul>
+            <li>First, an empty array is created.</li><br>
+            <li>Next a loop runs for the size of the map, in this case 10.</li><br>
+            <li>Each row gets a spot in the array, and for each row it is matched with a number of columns, making the array a two-dimensional array.</li><br>
+            <li>Each spot in the array is designated with a * and an empty character for even spacing. I used colorize to create a red tinted map.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Map Overview - Drawing -->
+    <div class="section rpg">
+      <div class="main_container">
+        <div class="text rpg_description">
+          <div class="subject">
+            <p><strong>Creating the Map - Drawing the Map</strong></p><br>
+          </div>
+          <p>The first part of the Game Logic clears the screen.</p><br>
+          <p>The player and enemy positions are created inside the array. The player is hardcoded in so they appear in the same place every time while the enemy row and column are random.</p><br>
+          <p>To draw the map we use another nested loop.</p>
+          <ul>
+            <li>In order to center the map a number of blank spaces are placed on each line. This is a print function, allowing the next step to appear on the same line.</li><br>
+            <li>Each column spot of the array is printed. Only once every part of that line of the map is printed will a new line be created.</li><br>
+            <li>The loop repeats, drawing each set of columns for the number of rows in the array, ending with a 10x10 grid.</li>
+          </ul>
+          <p>Once the map is drawn the player and enemy positions are reset to *s so that way, when they move, they won't leave a trail.</p>
+        </div>
+        <div class="img_container">
+          <%= image_tag("map_loop", :class => "battle map_loop code") %>
+          <%= image_tag("clean_board", :class => "battle clean_board code") %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Map Overview - Movement -->
+    <div class="section rpg">
+      <div class="main_container">
+        <div class="img_container">
+          <%= image_tag("map_movement", :class => "battle map_movement code") %>
+        </div>
+        <div class="text rpg_description">
+          <div class="subject">
+            <p><strong>Movement</strong></p><br>
+          </div>
+          <p>The loop pauses for player input. Using WASD the player may move around the map.</p><br>
+          <p>Each movement key either increases or decreases the value of the corresponding row or column in the array. When the screen redraws the map the player will appear to have moved.</p><br>
+          <p>The enemy moves after the player does, using a random number to decide which direction to travel.</p><br>
+          <p>The game checks that either player or enemy is not already at the edge of the map, and if so will not allow them to move off of the map and out of the range of the array.</p><br>
+          <p>If the player and enemy end their turn with the same row and column coordinates, meaning they land in the same space, the combat menu class is called and battle commences.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: RPG Final Thoughts -->
+    <div class="section rpg">
+      <div class="main_container">
+        <div class="text rpg_description">
+          <div class="subject">
+            <p><strong>Final Thoughts</strong></p><br>
+          </div>
+          <p>I enjoyed how many different ideas I was able to bring together to make this game:</p>
+          <ul>
+            <li>Building the combat menu as a class with a series of methods</li><br>
+            <li>Requiring the class in the map program, as well as the colorize gem</li><br>
+            <li>Creating a map with icons that both move randomly and with player input</li>
+          </ul>
+          <p>In the future I hope to increase the functionality by having more than one enemy to fight, as well as adding items to the map that may increase player stats in combat.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Garden Box -->
+    <!-- Section: Top -->
+    <div class="section gardenbox">
+      <div class="header gb_title">
+        <h1 id="gb"><a href="https://github.com/proto-zero/Garden_Box" target="_blank">GR-DN BO.xx</a></h1>
+        <p>A CyberPunk Garden Box</p>
+      </div>
+      <div class="main_container">
+        <div class="img_container">
+          <%= image_tag("gb_front.png", :class => "gb end") %>
+        </div>
+        <div class="text gb_description">
+          <p>Prior to creating Battle Fantasy, <a href="https://github.com/proto-zero/Garden_Box" target="_blank">this project</a> started off as an assignment in Academy Pittsburgh where we needed to store user information in a database and use it to calculate the area and perimeter of a garden box, then tell the user how many of their choice of crop they can plant within that garden box.</p><br>
+          <p>I made the project twice:</p>
+          <ul>
+            <li>The first time I created several arrays populated with several different dialogue options and had the program randomly select the dialogue presented to the user.</li><br>
+            <li>The second time around, on a whim, I wanted to drastically change the User Experience from a simple text-based interaction to a more stylish menu.</li>
+          </ul>
+          <p>What follows is my second attempt.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Database Connection -->
+    <div class="section gardenbox">
+      <div class="main_container">
+        <div class="text gb_description">
+          <div class="subject">
+            <p><strong>Setting Up The Database</strong></p><br>
+          </div>
+          <p>I required sqlite3 for my Ruby project.</p><br>
+          <p>Using a SQL SELECT statement, I grabbed everything from the Crops table in my database. Using an each statement, I then pushed the name of each crop and the ID for each row into corresponding arrays for later use.</p>
+        </div>
+        <div class="img_container">
+          <%= image_tag("gb_db01.png", :class => "gb db01 code") %>
+          <%= image_tag("gb_db02.png", :class => "gb db02 code") %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: First Screen -->
+    <div class="section gardenbox">
+      <div class="main_container">
+        <div class="img_container">
+          <%= image_tag("gb_firstscreen.png", :class => "gb firstscreen code") %>
+          <%= image_tag("gb_opening.png", :class => "gb opening code") %>
+          <%= image_tag("gb_opening02.png", :class => "gb opening02 code") %>
+        </div>
+        <div class="text gb_description">
+          <div class="subject">
+            <p><strong>The First Screen</strong></p><br>
+          </div>
+          <p>I created the first screen to resemble a menu, much like I would later go on to do with the Battle Fantasy combat menu.</p><br>
+          <p>I set the variable <code>lw</code> to be the line width in order to center the text. If I need to resize the screen I need only change one variable at the top instead of several.</p><br>
+          <p>The loop relies on the conditional <code>if</code> statement to proceed. It asks if length is equal to 0, which at the moment it is not. It then asks if the width is equal to 0. Since it is, it prints the prompt <code> width: </code> to allow the user to respond on the menu itself.</p><br>
+          <p>Once the width is set a few things happen:</p>
+          <ul>
+            <li>the length variable is set to 0, thus allowing the next iteration to access the first <code>if</code> statement.</li><br>
+            <li>the X-Axis is updated with the width.</li>
+          </ul>
+          <p>The user is prompted to give the length of the gardenbox which will update the Y-Axis. The loop is ended and we move on to the second screen.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Second Screen -->
+    <div class="section gardenbox">
+      <div class="main_container">
+        <div class="text gb_description">
+          <div class="subject">
+            <p><strong>The Second Screen</strong></p><br>
+          </div>
+          <p>Using the length and width we are now able to determine the size of a grid designed much like the one in the Battle Fantasy Map that was as yet to come, as well as to display the perimer and area of the gardenbox.</p><br>
+          <p>The program draws the map outline of the gardenbox, then asks the user to choose a crop to plant. It uses a <code>join</code> method to display all of the crops from the database previously stored in an array as a single line, spaced out with dashes for style.</p><br>
+
+          <p>The three crops in the database are carrots, corn, and beets. Each takes up a different square footage, meaning there are fewer beets possible to be planted than corn, and fewer still than carrots.</p>
+        </div>
+        <div class="img_container">
+          <%= image_tag("gb_drawmap.png", :class => "gb drawmap code") %>
+          <%= image_tag("gb_secondscreen.png", :class => "gb secondscreen code") %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Crop Choice -->
+    <div class="section gardenbox">
+      <div class="main_container">
+        <div class="img_container">
+          <%= image_tag("gb_middle.png", :class => "gb middle code") %>
+          <%= image_tag("gb_invalid.png", :class => "gb invalid code") %>
+        </div>
+        <div class="text gb_description">
+          <div class="subject">
+            <p><strong>Crop Choice</strong></p><br>
+          </div>
+          <p>The three crops in the database are carrots, corn, and beets. Each takes up a different square footage, meaning there are fewer beets possible to be planted than corn, and fewer still than carrots.</p><br>
+          <p>As a fun bit of style, if the user tries to select a crop that isn't available, the promp displays INVALID, and then asks for their crop choice again. This section is peppered with quick <code>sleep</code> methods to give a more interactive feeling.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Section: Crop Math -->
+    <div class="section gardenbox">
+      <div class="main_container">
+        <div class="text gb_description">
+          <div class="subject">
+            <p><strong>Crop Math</strong></p><br>
+          </div>
+          <p>Going back to the database, the program grabs the value, or how large a particular crop is. That value is placed in a new variable, <code>crop_amount</code>.</p><br>
+          <p>The crops-per-square-foot is multiplied by the calculated area then rounded down (since you can't plant only a percentage of a crop), giving us the total number of plantable crops.</p><br>
+          <p>The garden box outline is redefined by comparing a variable <code>p</code> to <code>total</code>. While <code>p</code> is less than <code>total</code>, a spot on the grid is filled in with an X.</p><br>
+          <p>Once a column is full it moves to the next available column, filling in each column, row by row, with Xs until the number of planted crops, <code>p</code>, is equal to the <code>total</code>.</p>
+        </div>
+        <div class="img_container">
+          <%= image_tag("gb_cropmath.png", :class => "gb cropmath code") %>
+          <%= image_tag("gb_plantable.png", :class => "gb plantable code") %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Third Screen -->
+    <div class="section gardenbox">
+      <div class="main_container">
+        <div class="img_container">
+          <%= image_tag("gb_thirdscreen.png", :class => "gb thirdscreen code") %>
+          <%= image_tag("gb_ending.png", :class => "gb ending code") %>
+        </div>
+        <div class="text gb_description">
+          <div class="subject">
+            <p><strong>Third Screen</strong></p><br>
+          </div>
+          <p>The third screen shows the completed garden box map outline, with Xs representing plantable crops and *s the remaining soil.</p><br>
+          <p>(I realize Alottment is mispelled, but it looks more CyberPunk that way...)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Garden Box Final Thoughts -->
+    <div class="section gardenbox">
+      <div class="main_container">
+        <div class="text gb_description">
+          <div class="subject">
+            <p><strong>Final Thoughts</strong></p><br>
+          </div>
+          <p>Since this was a class assignment I only worked on it during class hours, and as well it was the second version of the program I had designed.</p><br>
+          <p>With more time I would like to create one version of the menu screen as its own method that can be called on three times and filled in with new information as the program proceeds.</p><br>
+          <p>It would be fun to find a way to evenly space the planted crops on the garden box map outline for a more realistic touch, however the visual as currently depicted does a good job of showing how full or sparse a given garden box's dimensions would be overall.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Starship Bridge Systems Manager -->
+    <!-- Section: Top -->
+    <div class="section system_manager">
+      <div class="header starship_title">
+        <h1 id="system"><a href="https://github.com/proto-zero/Starship_Bridge" target="_blank">Starship Bridge</a></h1>
+        <p>A Starship Bridge Simulator</p>
+      </div>
+      <div class="main_container">
+        <div class="img_container">
+          <%= image_tag("starship_menu.png", :class => "starship menu redterm") %>
+        </div>
+        <div class="text bridge_description">
+          <p><a href="https://github.com/proto-zero/Starship_Bridge" target="_blank">Starship Bridge Systems Manager</a> was a Ruby project I completed shortly before attending Academy Pittsburgh. It is the sum of what I was able to teach myself in the Ruby Language.</p><br>
+          <p>While I had made a few small projects to help cement new ideas and concepts I was learning, this was the largest endeavor I had undertaken with my self-taught knowledge. I enjoy finding inspiration for projects from my personal interests, and building an interactive starship console was very gratifying.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Startup -->
+    <div class="section system_manager">
+      <div class="main_container">
+        <div class="text bridge_description">
+          <div class="subject">
+            <p><strong>Initial Calibration</strong></p><br>
+          </div>
+          <p>This was my first real attempt at creating a class populated with methods in Ruby. I started by organizing all of my variables within the initialize method, followed by a stylish boot-up screen.</p><br>
+          <p>This project really helped solidify my love of creating an immersive experience for the user. The elipses and <code>sleep</code> pauses give the sense that there's a lot happening behind the scenes as ship's systems come online.</p><br>
+        </div>
+        <div class="img_container">
+          <%= image_tag("starship_initialize.png", :class => "starship initialize code") %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Main Menu -->
+    <div class="section system_manager">
+      <div class="main_container">
+        <div class="img_container">
+          <%= image_tag("starship_setstatus.png", :class => "starship setstatus code") %>
+          <%= image_tag("starship_mainmenu.png", :class => "starship mainmenu code") %>
+        </div>
+        <div class="text bridge_description">
+          <div class="subject">
+            <p><strong>Main Menu</strong></p><br>
+          </div>
+          <p>After the calibration the user sets up the name of the ship and the captain. The program calls the <code>status</code> method and feeds it the name variables to display at the top of the menu.</p><br>
+          <p>Similarly as above, the screen is written line at a time with intricately spaced text. However, unlike the later programs, this one checks the status of the variables set in the <code>initialize</code> method and displays the corresponding message according to a conditional statement.</p><br>
+          <p>At the end it calls the <code>select</code> method which asks for the user input. The user simply types in the name of the system they want to interact with.</p><br>
+          <p><code>@phasers, @photons, </code>and <code>@shields</code> are simple boolean statements which the user can set to true or false.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Alerts -->
+    <div class="section system_manager">
+      <div class="main_container">
+        <div class="text bridge_description">
+          <div class="subject">
+            <p><strong>Alerts</strong></p><br>
+          </div>
+          <p>The first bit of tricky code is the alert system. Instead of immediately changing the menu like with the booleans, this opens a second prompt asking the user what alert status they wish to set.</p><br>
+
+          <p>The user has to type in the full alert status. Nearly all of the user input is put through the <code>.downcase</code> method in order to deal with any capitalization discrepancies. The <code>alerts</code> array is therefore all lowercase, while the prompt is capitalized. In this way I could not simply call the <code>alerts</code> array and display it as a string with a <code>.join</code> method.</p><br>
+          <p>When the user picks an alert status the program calls the main menu again and replaces the top text with the new alert status</p><br>
+          <p>The <code>@alert</code> variable is updated from a blank array to its new value and displayed accordingly.</p>
+        </div>
+        <div class="img_container">
+          <%= image_tag("starship_alerts.png", :class => "starship alerts code") %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Engines - Impulse -->
+    <div class="section system_manager">
+      <div class="main_container">
+        <div class="img_container">
+          <%= image_tag("starship_impulse.png", :class => "starship impulse code") %>
+        </div>
+        <div class="text bridge_description">
+          <div class="subject">
+            <p><strong>Impulse Engines</strong></p><br>
+          </div>
+          <p>Like the alerts, when the user selects engines it prompts them to specify between Impulse and Warp Engines.</p><br>
+          <p>The Impulse Engines work just like the alerts, calling the main menu, changing the top text, and updating the @ variable.
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Engines - Warp -->
+    <div class="section system_manager">
+      <div class="main_container">
+        <div class="text bridge_description">
+          <div class="subject">
+            <p><strong>Warp Engines</strong></p><br>
+          </div>
+          <p>For the Warp engines I set a variable <code>warp</code> as a range between 1 and 9. The program asks the user for a specific warp speed and checks their response against that range.</p>
+        </div>
+        <div class="img_container">
+          <%= image_tag("starship_warp.png", :class => "starship warp code") %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Sensors -->
+    <div class="section system_manager">
+      <div class="main_container">
+        <div class="img_container">
+          <%= image_tag("starship_sensors.png", :class => "starship sensors code") %>
+        </div>
+        <div class="text bridge_description">
+          <div class="subject">
+            <p><strong>Sensors</strong></p><br>
+          </div>
+          <p>At the time the sensors were the trickiest bit of code I had ever made on my own.</p><br>
+          <p>Using the <code>.each</code> method I list each of the possible ship sensors for the user.</p><br>
+          <p>In order to check the user response against the <code>sensorlist</code> I split the response string, mapped it to a new array, capitalized the array, then joined it all back together with spaces. In this way I can take whatever capitalization the user typed and let it match the <code>sensorlist</code> without having to resort to having an all lowercase array and typing it out a second time capitalized for the user prompt (like with the alerts).</p><br>
+          <p>While I don't have the exact source, this was an answer I found online and fit to work on my project.</p><br>
+          <p>One neat thing is that, unlike the other ship's systems, the user can set more than one sensor to be active at a time. The selected sensor is pushed to the <code>@sensors</code> array in the main menu, or deleted from the array when deactivated.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Final Thoughts -->
+    <div class="section system_manager">
+      <div class="main_container">
+        <div class="text bridge_description">
+          <div class="subject">
+            <p><strong>Final Thoughts</strong></p><br>
+          </div>
+          <p>I like that I created a loop over the whole program without using a <code>while</code> statement, instead calling new methods which in turn called the main menu when they completed. It's not how I would go on to learn loops, but at the time, for something as sophisticated as this program was, it felt like a real achievement.</p><br>
+          <p>I'm also proud of  promping the user on which systems they may interact with, and then allowing them to type in full sentences if they wish. Using the <code>.include?</code> method lets the program scan the user response for the prompted keywords like phasers or engines and react appropriately. It's just another way of creating immersion for the user.</p><br>
+          <p>Inside every user input is the possibility that they will pick an option that is unavailable. I enjoyed creating while loops in every user response that checked the user response against all valid responses and would return a Command Not Recognized error to the user before allowing them to choose again. The loop would only break once they selected something the program could proceed with.</p><br>
+          <p>The thorough use of documentation was immensely helpful while developing this project. While at the time I only knew to use comments as section headings, I know enjoy using them as notes, placeholders, and instructions.</p>
+        </div>
+        <div class="img_container">
+          <%= image_tag("starship_end.png", :class => "starship end redterm") %>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section intro">
+      <div class="header my_name">
+        <h1>Thanks!</h1>
+      </div>
+      <div class="text bio">
+          <p>I have a few more silly projects in my github, including the first interaction with the WOPR/Joshua computer from the movie War Games, as well as the Baseline Test from Blade Runner 2049. These were more for practice than for showcasing.</p><br>
+          <p>This site was built using Ruby on Rails. In addition, I am also learning React.</p><br>
+          <p>Through Academy Pittsburgh I also gained experience using C#, Javascript, Git, MVC, and SQLite.</p><br>
+          <p>Thanks for checking me out. you can find me at <a href="https://github.com/proto-zero/" target="_blank">GitHub</a>, <a href="https://www.linkedin.com/in/sean-lenhart-32974620b/" target="_blank">LinkedIn</a>, <a href="https://twitter.com/SeanLenhart" target="_blank">Twitter</a>, or at theseanlenhart at gmail dot com</p>
+      </div>
+    </div>
+
+
+
+
+    <!-- TO DO
+      Create alts and descriptions for better accessibility
+      Add separate tabs for full screen images
+      Add surprise to body background
+      Add links back to Top
+      Adjust iphone view
+      Choose fonts
+      Add space to text
+      adjust hover class names
+      Fix min-margins
+
+      + adjust border-radius to px
+      + contrast in text
+      + Add Links to spots on the page
+      + Get the bubbles to center
+      + Fix images to work with different screen sizes
+      + Add Footer
+      + Update borders at bio and images
+      + Add Hover to zoom on images
+      + Organize links like a table of contents
+      + Finish adding content for gardenbox
+      + Finish adding content for battle fantasy
+      + Finish adding content for starship
+      + Add Links and social media/contact
+      -->
+
+  </body>
+
+  <footer>
+    <p>Sean Lenhart 2021</p><p><a href="#introduction">back to top</a></p>
+  </footer>
+</html>
