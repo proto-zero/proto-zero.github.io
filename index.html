@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
+    <meta charset="utf-8">
+    <meta name="twitter:title" content="Sean Lenhart - Developer">
+    <meta name="author" content="Sean Lenhart">
+    <meta name="description" content="A walkthrough of the Ruby Projects of Sean Lenhart's GitHub.">
     <title>Sean Lenhart - Developer</title>
-    <%= favicon_link_tag asset_path('headshot.jpg') %>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/headshot.jpg">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <!-- Welcome Screen -->
     <div class="section intro">
@@ -19,7 +18,8 @@
           <h1>Sean Lenhart</h1>
         </div>
         <div>
-          <p><a href="https://github.com/proto-zero" target="_blank">GitHub</a> -
+          <p><a href="https://github.com/proto-zero" target="_blank">GitHub</a>
+           -
             <a href="https://www.linkedin.com/in/sean-lenhart-32974620b/" target="_blank">LinkedIn</a> -
             <a href="https://twitter.com/SeanLenhart" target="_blank">Twitter</a> -
             theseanlenhart at gmail dot com</p>
@@ -27,13 +27,8 @@
       </div>
       <div class="main_container">
         <div class="img_container">
-          <%= image_tag("headshot.jpg", :class => "headshot") %>
-          <!-- <div class="toc">
-            <h2>Table Of Contents</h2>
-            <p><a href="#rpg"><strong>Battle Fantasy</strong></a> - RPG Battle System</p>
-            <p><a href="#gb"><strong>Garden Box</strong></a> - CyberPunk Garden Box</p>
-            <p><a href="#system"><strong>Starship Bridge</strong></a> - Starship Bridge Simulator</p>
-          </div> -->
+          <img src="./images/headshot.jpg" class="headshot">
+
         </div>
         <div class="text bio">
           <h2>Hi, I'm Sean</h2>
@@ -55,12 +50,12 @@
       </div>
       <div class="main_container">
         <div class="img_container">
-          <%= image_tag("battle_start.png", :class => "battle start term") %>
-          <%= image_tag("battle_maxscreen.png", :class => "battle maxscreen term") %>
+          <img src="./images/battle_start.png" class="battle start term">
+          <img src="./images/battle_maxscreen.png" class="battle maxscreen term">
         </div>
         <div class="text rpg_description">
           <p><a href="https://github.com/proto-zero/Battle_Fantasy" target="_blank">Battle Fantasy</a> is what happens when you play Final Fantasy X during breaks in Academy Pittsburgh.</p><br>
-          <%= image_tag("ffxmenu.png", :class => "ffxmenu") %><br>
+          <img src="./images/ffxmenu.png" class="ffxmenu"><br>
           <p>In most turn-based role-playing-games, when you encounter an enemy, you are given a menu that includes things like health, status, and a list of actions that you can perform.</p><br>
           <p>I find I enjoy creating menus in the terminal; trying to create a loop that changes just enough to modify the menu but not break it. I enjoy the illusion of making a repeating set of strings that looks like a static page.</p>
         </div>
@@ -79,7 +74,7 @@
           <p>The menu has been refined as more features have been added. Having it exist as its own method made implementing changes easy to track inside the code stack.</p>
         </div>
         <div class="img_container">
-          <%= image_tag("battle_gamescreenlayout.png", :class => "battle gamescreenlayout code") %>
+          <img src="./images/battle_gamescreenlayout.png" class="battle gamescreenlayout code">
         </div>
       </div>
     </div>
@@ -88,7 +83,7 @@
     <div class="section rpg">
       <div class="main_container">
         <div class="img_container">
-          <%= image_tag("battle_gamelogic.png", :class => "battle gamelogic code") %>
+          <img src="./images/battle_gamelogic.png" class="battle gamelogic code">
         </div>
         <div class="text rpg_description">
           <div class="subject">
@@ -121,7 +116,7 @@
           <p>Any attack numbers above 70 miss and the enemy does not take damage.</p>
         </div>
         <div class="img_container">
-          <%= image_tag("battle attack", :class => "battle attack code") %>
+          <img src="./images/battle_attack.png" class="battle attack code">
         </div>
       </div>
     </div>
@@ -138,7 +133,7 @@
           <p>Of course, defending against an attack can be dangerous, and there is a small chance that the player will stumble, leaving themselves vulnerable to attack. The defense variable is automatically set to -5 which will increase any enemy damage.</p>
         </div>
         <div class="img_container">
-          <%= image_tag("battle defend", :class => "battle defend code") %>
+          <img src="./images/battle_defend.png" class="battle defend code">
         </div>
       </div>
     </div>
@@ -160,7 +155,7 @@
             <p>The healing number is added to a player_hp variable, which is compared to the starting maximum health of the player. If player_hp exceeds the starting health, then the total health refreshed is capped at the maximum amount.</p>
           </div>
         <div class="img_container">
-          <%= image_tag("battle magic", :class => "battle player_magic code") %>
+          <img src="./images/battle_magic.png" class="battle player_magic code">
         </div>
       </div>
     </div>
@@ -169,7 +164,7 @@
     <div class="section rpg">
       <div class="main_container">
         <div class="img_container">
-          <%= image_tag("status_effects.png", :class => "battle status_effect code") %>
+          <img src="./images/status_effects.png" class="battle status_effect code">
         </div>
         <div class="text rpg_description">
           <div class="subject">
@@ -197,7 +192,7 @@
           <p>If you can catch the enemy then the game calls the battle menu class and shifts to the combat described above.</p><br>
         </div>
         <div class="img_container">
-          <%= image_tag("map_start", :class => "battle map_start term") %>
+          <img src="./images/map_start" class="battle map_start term">
         </div>
       </div>
     </div>
@@ -206,7 +201,7 @@
     <div class="section rpg">
       <div class="main_container">
         <div class="img_container">
-          <%= image_tag("map_setup.png", :class => "battle map_setup code") %>
+          <img src="./images/map_setup.png" class="battle map_setup code">
         </div>
         <div class="text rpg_description">
           <div class="subject">
@@ -241,8 +236,8 @@
           <p>Once the map is drawn the player and enemy positions are reset to *s so that way, when they move, they won't leave a trail.</p>
         </div>
         <div class="img_container">
-          <%= image_tag("map_loop", :class => "battle map_loop code") %>
-          <%= image_tag("clean_board", :class => "battle clean_board code") %>
+          <img src="./images/map_loop" class="battle map_loop code">
+          <img src="./images/clean_board" class="battle clean_board code">
         </div>
       </div>
     </div>
@@ -251,7 +246,7 @@
     <div class="section rpg">
       <div class="main_container">
         <div class="img_container">
-          <%= image_tag("map_movement", :class => "battle map_movement code") %>
+          <img src="./images/map_movement" class="battle map_movement code">
         </div>
         <div class="text rpg_description">
           <div class="subject">
@@ -588,38 +583,7 @@
           <p>Thanks for checking me out. you can find me at <a href="https://github.com/proto-zero/" target="_blank">GitHub</a>, <a href="https://www.linkedin.com/in/sean-lenhart-32974620b/" target="_blank">LinkedIn</a>, <a href="https://twitter.com/SeanLenhart" target="_blank">Twitter</a>, or at theseanlenhart at gmail dot com</p>
       </div>
     </div>
-
-
-
-
-    <!-- TO DO
-      Create alts and descriptions for better accessibility
-      Add separate tabs for full screen images
-      Add surprise to body background
-      Add links back to Top
-      Adjust iphone view
-      Choose fonts
-      Add space to text
-      adjust hover class names
-      Fix min-margins
-
-      + adjust border-radius to px
-      + contrast in text
-      + Add Links to spots on the page
-      + Get the bubbles to center
-      + Fix images to work with different screen sizes
-      + Add Footer
-      + Update borders at bio and images
-      + Add Hover to zoom on images
-      + Organize links like a table of contents
-      + Finish adding content for gardenbox
-      + Finish adding content for battle fantasy
-      + Finish adding content for starship
-      + Add Links and social media/contact
-      -->
-
   </body>
-
   <footer>
     <p>Sean Lenhart 2021</p><p><a href="#introduction">back to top</a></p>
   </footer>
