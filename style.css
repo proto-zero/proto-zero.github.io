@@ -20,6 +20,7 @@ body {
 }
 .intro {
   background: #a9081c;
+  border: none;
 }
 .rpg {
   background: #6091ab;
