@@ -1,16 +1,13 @@
 body {
   background: gold;
+  margin: o;
 }
 .container {
   height: 100vh;
   width: 100vw;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
 }
 .page {
-  height: 50vh;
-  width: 40vh;
   color: white;
   border: 10px solid white;
   border-radius: 30px;
@@ -19,6 +16,7 @@ body {
   justify-content: center;
   font-size: 6vw;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  margin: 5px;
 }
 a {
   color: white;
@@ -29,4 +27,28 @@ a {
 }
 .ruby {
   background: blue;
+}
+
+
+
+@media (min-width: 280px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .page {
+    width: 80vw;
+    height: 45vh;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .page {
+    width: 40vw;
+    height: 45vh;
+  }
 }
