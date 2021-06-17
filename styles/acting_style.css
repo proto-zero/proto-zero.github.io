@@ -45,7 +45,6 @@ body {
   color: #B00020;
   font-size: 6vw;
   margin: 0;
-  text-shadow: -1px 1px 2px #f6f6f6;
 }
 .title a {
   color: #f6f6f6;
@@ -158,12 +157,15 @@ iframe {
 }
 @media (min-width: 760px) {
   .transparent {
-    height: 29vh;
+    height: 26vh;
+  }
+  .title h1 {
+    text-shadow: -1px 1px 2px #F6F6F6;
   }
 }
 @media (min-width: 1024px) {
   .transparent {
-    height: 39vh;
+    height: 26vh;
   }
   .title p {
     font-size: 1.5vw;
