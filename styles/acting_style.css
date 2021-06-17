@@ -31,6 +31,17 @@ body {
   box-shadow: 3px 19px 22px black;
   border: 2px solid #f6f6f6;
 }
+.banner {
+  background: #B00020;
+  text-align: center;
+  border-radius: 30px;
+  margin: 10px 10px 20px 10px;
+  box-shadow: -10px 19px 18px black;
+  color: #f6f6f6;
+  border: 2px solid #f6f6f6;
+  text-shadow: -1px 1px 2px #121212;
+  font-family: 'Staatliches';
+}
 .title {
   display: flex;
   flex-direction: column;
@@ -64,17 +75,6 @@ body {
   box-shadow: 0 19px 18px black, 0 15px 12px black;
   margin: 10px 10px 20px 10px;
   border: 2px solid #f6f6f6;
-}
-.banner {
-  background: #B00020;
-  text-align: center;
-  border-radius: 30px;
-  margin: 10px 10px 20px 10px;
-  box-shadow: -10px 19px 18px black;
-  color: #f6f6f6;
-  border: 2px solid #f6f6f6;
-  text-shadow: -1px 1px 2px #121212;
-  font-family: 'Staatliches';
 }
 .reels_section {
   display: flex;
@@ -110,6 +110,7 @@ iframe {
   box-shadow: 0 19px 18px rgba(0,0,0,1), 0 15px 12px rgba(0,0,0,1);
 }
 .review_section {
+  width: 80vw;
   display: flex;
   flex-direction: column;
   align-items: center;
