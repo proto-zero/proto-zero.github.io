@@ -113,6 +113,9 @@ iframe {
   .transparent {
     height: 15vh;
   }
+  .title h1 {
+    text-shadow: none;
+  }
   .title p {
     font-size: 3vw;
   }
