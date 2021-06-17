@@ -40,10 +40,12 @@ body {
   color: #f6f6f6;
   font-size: 1.5vw;
   margin: 0;
+  font-family: 'Arial';
 }
 .title h1 {
   color: #B00020;
-  font-size: 6vw;
+  font-size: 10vw;
+  font-family: 'Staatliches';
   margin: 0;
 }
 .title a {
@@ -72,6 +74,7 @@ body {
   color: #f6f6f6;
   border: 2px solid #f6f6f6;
   text-shadow: -1px 1px 2px #121212;
+  font-family: 'Staatliches';
 }
 .reels_section {
   display: flex;
@@ -93,6 +96,7 @@ iframe {
   height: auto;
   display: flex;
   padding: 15px;
+  font-family: "Arial";
 }
 .theatre, .voice {
   display: flex;
