@@ -1,32 +1,56 @@
 body {
-  background: gold;
+  background-image: linear-gradient(#404040, #121212);
+  height: 100vh;
   margin: o;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  font-size: 8vw;
+  color: #E4E6EB;
+  text-shadow: 2px 2px 4px #121212;
+  margin: 20px 0 0 5px;
+}
+.subtitle {
+  font-size: 5vw;
+  color: #B3B3B3;
+  text-shadow: 2px 2px 4px #121212;
 }
 .container {
-  height: 100vh;
+  height: 70vh;
   width: 100vw;
   display: flex;
 }
 .page {
-  color: white;
-  border: 10px solid white;
+  color: #E4E6EB;
+  border: 10px solid #E4E6EB;;
   border-radius: 30px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 6vw;
-  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
   margin: 5px;
 }
+.page:hover {
+  box-shadow: 12px 2px 6px rgba(0, 0, 0, .8), -12px 2px 6px rgba(0, 0, 0, .8);
+}
 a {
-  color: white;
+  color: #E4E6EB;
   text-decoration: none;
 }
+.head {
+  font-size: 4vw;
+  margin-bottom: 5px;
+}
+.text {
+  font-size: 2vw;
+}
 .acting {
-  background: red;
+  background: #B03030;
 }
 .ruby {
-  background: blue;
+  background: #192756;
 }
 
 
