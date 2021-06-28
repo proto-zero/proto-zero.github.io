@@ -39,7 +39,7 @@ body {
   padding: 5px;
 }
 .page:hover {
-  box-shadow: 12px 2px 6px rgba(0, 0, 0, .8), -12px 2px 6px rgba(0, 0, 0, .8);
+  box-shadow: 0px 6px 12px 6px rgba(0,0,0,0.8)
 }
 a {
   color: #E4E6EB;
@@ -54,13 +54,11 @@ a {
 .ruby {
   background: #192756;
 }
-
-
 .resume_container {
   display: flex;
   color: #E4E6EB;
   flex-direction: column;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .lede {
   background: #B03030;
@@ -69,7 +67,7 @@ a {
   text-align: center;
 }
 .main_article {
-  border: 5px solid #B03030;
+  border: 10px solid #B03030;
   padding: 5px;
   display: flex;
   flex-direction: column;
