@@ -5,7 +5,7 @@ body {
   justify-content: center;
 }
 .gradient {
-  background-image: linear-gradient(#404040, #121212);
+  background-image: linear-gradient(#545454, #121212);
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -63,7 +63,6 @@ a {
   margin-top: 40px;
 }
 .lede {
-  font-size: 3vw;
   background: #B03030;
   padding: 5px;
   border-radius: 30px 30px 0 0;
@@ -77,7 +76,6 @@ a {
   margin-bottom: 20px;
 }
 .section {
-  font-size: 3vw;
   background: #B03030;
   width: 25%;
   text-align: center;
@@ -121,6 +119,15 @@ strong {
   .resume_container {
     width: 80vw;
   }
+  .lede {
+    font-size: 6vw;
+  }
+  .section {
+    font-size: 3.5vw;
+  }
+  .info {
+    font-size: 2.5vw;
+  }
 }
 @media (min-width: 1024px) {
   .gradient {
@@ -140,5 +147,14 @@ strong {
   }
   .text {
     font-size: 2vw;
+  }
+  .lede {
+    font-size: 3vw;
+  }
+  .section {
+    font-size: 3vw;
+  }
+  .info {
+    font-size: 1.5vw;
   }
 }
