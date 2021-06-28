@@ -1,9 +1,12 @@
 body {
   background: #121212;
   margin: 0;
+  display: flex;
+  justify-content: center;
 }
 .gradient {
   background-image: linear-gradient(#404040, #121212);
+  width: 80vw;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -52,10 +55,41 @@ a {
 .ruby {
   background: #192756;
 }
+
+
 .resume_container {
-  width: 70vw;
-  color: white;
+  display: flex;
+  color: #E4E6EB;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.lede {
+  font-size: 3vw;
+  background: #B03030;
+  padding: 5px;
+  border-radius: 30px 30px 0 0;
   text-align: center;
+}
+.main_article {
+  border: 5px solid #B03030;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.section {
+  font-size: 3vw;
+  background: #B03030;
+  width: 25%;
+  text-align: center;
+  margin: 5px;
+}
+.info {
+  font-size: 1.5vw;
+  margin: 5px;
+  padding: 5px 20px 5px 20px;
+}
+li {
+  margin: 5px;
 }
 
 /* ///////////////////////////////////////// */
@@ -74,6 +108,9 @@ a {
   }
   .text {
     font-size: 2vw;
+  }
+  .resume_container {
+    width: 80vw;
   }
 }
 @media (min-width: 1024px) {
