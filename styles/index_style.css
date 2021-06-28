@@ -1,7 +1,10 @@
 body {
+  background: #121212;
+  margin: 0;
+}
+.gradient {
   background-image: linear-gradient(#404040, #121212);
-  height: 100vh;
-  margin: o;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,10 +19,10 @@ body {
   font-size: 5vw;
   color: #B3B3B3;
   text-shadow: 2px 2px 4px #121212;
+  margin: 0 0 20px 0;
 }
 .container {
-  height: 70vh;
-  width: 100vw;
+  width: 70vw;
   display: flex;
 }
 .page {
@@ -30,7 +33,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 5px;
+  margin: 20px;
+  padding: 5px;
 }
 .page:hover {
   box-shadow: 12px 2px 6px rgba(0, 0, 0, .8), -12px 2px 6px rgba(0, 0, 0, .8);
@@ -40,11 +44,7 @@ a {
   text-decoration: none;
 }
 .head {
-  font-size: 4vw;
   margin-bottom: 5px;
-}
-.text {
-  font-size: 2vw;
 }
 .acting {
   background: #B03030;
@@ -52,8 +52,13 @@ a {
 .ruby {
   background: #192756;
 }
+.resume_container {
+  width: 70vw;
+  color: white;
+  text-align: center;
+}
 
-
+/* ///////////////////////////////////////// */
 
 @media (min-width: 280px) {
   .container {
@@ -63,6 +68,12 @@ a {
   .page {
     width: 80vw;
     height: 45vh;
+  }
+  .head {
+    font-size: 6vw;
+  }
+  .text {
+    font-size: 2vw;
   }
 }
 @media (min-width: 1024px) {
@@ -74,5 +85,11 @@ a {
   .page {
     width: 40vw;
     height: 45vh;
+  }
+  .head {
+    font-size: 4vw;
+  }
+  .text {
+    font-size: 2vw;
   }
 }
