@@ -12,13 +12,12 @@ body {
   align-items: center;
 }
 .title {
-  font-size: 8vw;
   color: #E4E6EB;
   text-shadow: 2px 2px 4px #121212;
   margin: 20px 0 0 5px;
 }
 .subtitle {
-  font-size: 5vw;
+  font-size: 7vw;
   color: #B3B3B3;
   text-shadow: 2px 2px 4px #121212;
   margin: 0 0 20px 0;
@@ -51,8 +50,19 @@ a {
 .acting {
   background: #B03030;
 }
+.acting:hover {
+  background: #B03030;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/acting.png");
+  /* background-image: url("../images/acting.png"); */
+  background-size: cover;
+}
 .ruby {
   background: #192756;
+}
+.ruby:hover {
+  background: #192756;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/ruby.png");
+  background-size: cover;
 }
 .resume_container {
   display: flex;
@@ -75,17 +85,15 @@ a {
 }
 .section {
   background: #B03030;
-  width: 25%;
   text-align: center;
-  margin: 20px 5px 5px 5px;
+  margin: 10px 5px 5px 5px;
 }
 .info {
-  font-size: 1.5vw;
-  margin: 5px;
+  margin: 5px 5px 10px 5px;
   padding: 5px 20px 5px 20px;
 }
 ul {
-  margin-top: 10px;
+  margin: 10px 0 10px 0;
 }
 li {
   margin: 5px;
@@ -100,36 +108,46 @@ strong {
   .gradient {
     width: 100vw;
   }
+  .title {
+    font-size: 12vw;
+  }
   .container {
     flex-direction: column;
     align-items: center;
   }
   .page {
-    width: 80vw;
-    height: 45vh;
+    width: 77vw;
+    height: 40vh;
   }
   .head {
-    font-size: 6vw;
+    font-size: 7.5vw;
   }
   .text {
-    font-size: 2vw;
+    font-size: 6vw;
   }
   .resume_container {
     width: 80vw;
   }
   .lede {
-    font-size: 6vw;
+    font-size: 9vw;
+  }
+  .main_article {
+    align-items: center;
   }
   .section {
-    font-size: 3.5vw;
+    font-size: 7vw;
+    width: 52%;
   }
   .info {
-    font-size: 2.5vw;
+    font-size: 4vw;
   }
 }
 @media (min-width: 1024px) {
   .gradient {
     width: 80vw;
+  }
+  .title {
+    font-size: 10vw;
   }
   .container {
     flex-direction: row;
@@ -149,10 +167,14 @@ strong {
   .lede {
     font-size: 3vw;
   }
+  .main_article {
+    align-items: flex-start;
+  }
   .section {
     font-size: 3vw;
+    width: 33%;
   }
   .info {
-    font-size: 1.5vw;
+    font-size: 2vw;
   }
 }
