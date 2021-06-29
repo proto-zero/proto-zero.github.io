@@ -1,0 +1,179 @@
+body {
+  background: lightgrey;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.main_container {
+  background: white;
+  width: 90vw;
+  min-width: 475px;
+  height: auto;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  margin-bottom: 5px;
+}
+
+/* Header */
+.banner_box {
+  background: #2d4776;
+  width: 98%;
+  height: 21vh;
+  min-height: 115px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 1px;
+  border-radius: 20px 20px 0 0;
+}
+.banner_img {
+  background-image: url("http://www.LenhartChiropracticClinic.com/wp-content/themes/chiro/images/header_new2.gif");
+  height: 20vh;
+  min-height: 115px;
+  width: 99%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+.banner_textbox {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0 5px 20px;
+}
+.banner_text {
+  color: white;
+  margin-left: 10px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #000;
+}
+.title {
+  font-size: 30px;
+}
+.title a {
+  color: white;
+}
+.link_container {
+  width: 98%;
+  display: flex;
+  justify-content: center;
+  background: #2d4776;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.4);
+  margin-bottom: 5px;
+}
+.link_container a {
+  color: white;
+  text-decoration: none;
+}
+.link_button {
+  padding: 5px 10px 5px;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.link_button:hover {
+  background: white;
+  color: #2d4776;
+}
+.current {
+  background: white;
+  color: #2d4776;
+}
+
+/* Main Article */
+.article_container {
+  width: 98%;
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+}
+.text_bar a {
+  color: white;
+}
+.image {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  color: #2d4776;
+}
+.article {
+  width: 55%;
+  padding: 5px;
+  font-size: 18px;
+  margin: 5px;
+  color: #2d4776;
+  display: flex;
+  flex-direction: column;
+}
+.article_title {
+  font-size: 25px;
+}
+.article_title, .article_lede {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+.locations .text {
+  margin-left: 50px;
+}
+
+/* Sidebar */
+.sidebar_container {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+.text_bar {
+  background: #2d4776;
+  width: 98%;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  box-shadow: 0 10px 5px -8px rgba(0, 0, 0, 0.4);
+}
+.sidebar_container img, .sidebar_container a {
+  width: 98%;
+}
+
+/* Footer */
+.footer_container {
+  background: #2d4776;
+  width: 98%;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding: 10px 0 40px;
+  box-shadow: 0 10px 5px -8px rgba(0, 0, 0, 0.4);
+}
+.footer_article {
+  color: white;
+  margin: 5px;
+}
+.footer_title:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  background: #2d4776;
+  color: white;
+}
+.footer_title {
+  background: white;
+  text-align: center;
+  border-radius: 20px;
+  font-weight: bold;
+  padding: 8px;
+  margin-bottom: 5px;
+}
+.footer_container a {
+  color: #2d4776;
+  text-decoration: none;
+}

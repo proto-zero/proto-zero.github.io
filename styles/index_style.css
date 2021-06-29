@@ -64,6 +64,14 @@ a {
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/ruby.png");
   background-size: cover;
 }
+.old_chiro {
+  background: indigo;
+}
+.old_chiro:hover {
+  background: indigo;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/old_chiro.png");
+  background-size: cover;
+}
 .resume_container {
   display: flex;
   color: #E4E6EB;
