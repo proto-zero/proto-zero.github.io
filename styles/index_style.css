@@ -49,6 +49,7 @@ a {
 }
 .head {
   margin-bottom: 5px;
+  text-align: center;
   font-family: 'Oswald', sans-serif;
 }
 .text {
@@ -60,7 +61,6 @@ a {
 .acting:hover {
   background: #B03030;
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/acting.png");
-  /* background-image: url("../images/acting.png"); */
   background-size: cover;
 }
 .ruby {
@@ -77,6 +77,14 @@ a {
 .old_chiro:hover {
   background: indigo;
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/old_chiro.png");
+  background-size: cover;
+}
+.new_chiro {
+  background: green;
+}
+.new_chiro:hover {
+  background: green;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/new_chiro.png");
   background-size: cover;
 }
 .resume_container {
