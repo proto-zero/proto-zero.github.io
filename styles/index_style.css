@@ -56,36 +56,40 @@ a {
   font-family: 'Arial';
 }
 .acting {
-  background: #B03030;
+  transition: background-image 1s ease-in-out;
+  background-image:url("../images/bg_red.png");
 }
 .acting:hover {
-  background: #B03030;
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/acting.png");
+  background-image: url("../images/acting.png");
   background-size: cover;
+  text-shadow: 2px 2px 4px #121212;
 }
 .ruby {
-  background: #192756;
+  transition: background-image 1s ease-in-out;
+  background-image:url("../images/bg_blue.png");
 }
 .ruby:hover {
-  background: #192756;
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/ruby.png");
+  background-image: url("../images/ruby.png");
   background-size: cover;
+  text-shadow: 2px 2px 4px #121212;
 }
 .old_chiro {
-  background: indigo;
+  transition: background-image 1s ease-in-out;
+  background-image:url("../images/bg_indigo.png");
 }
 .old_chiro:hover {
-  background: indigo;
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/old_chiro.png");
+  background-image: url("../images/old_chiro.png");
   background-size: cover;
+  text-shadow: 2px 2px 4px #121212;
 }
 .new_chiro {
-  background: green;
+  transition: background-image 1s ease-in-out;
+  background-image:url("../images/bg_green.png");
 }
 .new_chiro:hover {
-  background: green;
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/new_chiro.png");
+  background-image: url("../images/new_chiro.png");
   background-size: cover;
+  text-shadow: 2px 2px 4px #121212;
 }
 .resume_container {
   display: flex;
@@ -146,10 +150,10 @@ strong {
     height: 40vh;
   }
   .head {
-    font-size: 7.5vw;
+    font-size: clamp(4vw, 6vw, 7.5vw);
   }
   .text {
-    font-size: 6vw;
+    font-size: clamp(3vw, 5vw, 6vw);
   }
   .resume_container {
     width: 80vw;
