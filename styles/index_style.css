@@ -20,6 +20,7 @@ body {
 .subtitle {
   font-size: 7vw;
   color: #B3B3B3;
+  color: #933838;
   text-shadow: 2px 2px 4px #121212;
   margin: 0 0 20px 0;
   font-family: 'Merriweather',;
@@ -55,6 +56,9 @@ a {
 .text {
   font-family: 'Arial';
 }
+.explanation {
+  font-family: 'Merriweather', serif;
+}
 .acting {
   transition: background-image 1s ease-in-out;
   background-image:url("../images/bg_red.png");
@@ -88,6 +92,15 @@ a {
 }
 .new_chiro:hover {
   background-image: url("../images/new_chiro.png");
+  background-size: cover;
+  text-shadow: 2px 2px 4px #121212;
+}
+.github {
+  transition: background-image 1s ease-in-out;
+  background-image:url("../images/bg_blue.png");
+}
+.github:hover {
+  background-image: url("../images/github.png");
   background-size: cover;
   text-shadow: 2px 2px 4px #121212;
 }
