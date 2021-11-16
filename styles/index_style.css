@@ -104,6 +104,15 @@ a {
   background-size: cover;
   text-shadow: 2px 2px 4px #121212;
 }
+.sticky {
+  transition: background-image 1s ease-in-out;
+  background-image:url("../images/bg_yellow.png");
+}
+.sticky:hover {
+  background-image: url("../images/todo.png");
+  background-size: cover;
+  text-shadow: 2px 2px 4px #121212;
+}
 .resume_container {
   display: flex;
   color: #E4E6EB;
