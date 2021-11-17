@@ -4,7 +4,7 @@
 
 ## Notes
 
-Lenhart Chiropractic was originally built using WordPress. This was an exercise to try to rebuild the site, emulating the WordPress layout, while making small quality of life improvements, such as adjusting the border-radius of elements, adding dropshadow, and utilizing a more efficient use of screen real estate.<a href="https://www.twitter.com>hello</a>
+Lenhart Chiropractic was originally built using WordPress. This was an exercise to try to rebuild the site, emulating the WordPress layout, while making small quality of life improvements, such as adjusting the border-radius of elements, adding dropshadow, and utilizing a more efficient use of screen real estate.<a href="https://www.twitter.com">hello</a>
 
 ## Folders
 
