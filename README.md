@@ -1,23 +1,26 @@
-# https://proto-zero.github.io/
+# The Front-End Portfolio of Sean Lenhart
+## https://proto-zero.github.io/
 
-## The Front-End Portfolio of Sean Lenhart
+## Folders
 
-(Currently GitHub pages only allows for HTML/CSS)
+## images
 
-## Index
+A directory of the images used in the index and acting pages.
 
-The Main Hub linking the current portfolio pages, built using HTML/CSS.
+### old_chiro
 
-## Acting
+File directory for Lenhart Chiropractic Clinic website, recreated from an old Wordpress layout.
 
-The Personal Acting Website for Sean Lenhart. Complete and fully functional. Built using HTML/CSS.
+### styles
 
-## Ruby
+The css style files for the index and acting pages.
 
-A website that displays and discusses a few of Sean Lenhart's unique programs created in Ruby. Originally built in Ruby on Rails (https://github.com/proto-zero/resume_site) and converted to HTML/CSS for display on GitHub pages.
+## Files
 
-TODO: Adjust sizes and placement for mobile screens.
+### acting.html
 
-## Still In Development
+The Personal Acting Website for Sean Lenhart. Built using HTML/CSS.
 
-- A Website for Lenhart Chiropractic Clinic, built using React.
+### index.html
+
+The Main Hub linking the current portfolio pages. Built using HTML/CSS.
