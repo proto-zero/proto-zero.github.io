@@ -1,6 +1,4 @@
-# Lenhart Chiropratic (Old)
-
-## https://proto-zero.github.io/old_chiro/index.html
+# <a href="https://proto-zero.github.io/old_chiro/index.html">Lenhart Chiropratic (Old)</a>
 
 ## Notes
 
