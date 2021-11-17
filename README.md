@@ -1,6 +1,4 @@
-# The Front-End Portfolio of Sean Lenhart
-
-## https://proto-zero.github.io/
+# The <a href="https://proto-zero.github.io/" target="_blank">Front-End Portfolio</a> of Sean Lenhart
 
 ## Notes
 
