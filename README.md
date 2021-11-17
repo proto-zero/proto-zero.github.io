@@ -8,22 +8,22 @@ A collection of sites created by Sean Lenhart. The portolio links to the acting 
 
 ### images
 
-    A directory of the images used in the index and acting pages.
+A directory of the images used in the index and acting pages.
 
 ### old_chiro
 
-    File directory for Lenhart Chiropractic Clinic website, recreated from an old Wordpress layout.
+File directory for Lenhart Chiropractic Clinic website, recreated from an old Wordpress layout.
 
 ### styles
 
-    The css style files for the index and acting pages.
+The css style files for the index and acting pages.
 
 ## Files
 
 ### acting.html
 
-    The Personal Acting Website for Sean Lenhart. Built using HTML/CSS.
+The Personal Acting Website for Sean Lenhart. Built using HTML/CSS.
 
 ### index.html
 
-    The Main Hub linking the portfolio pages. Built using HTML/CSS.
+The Main Hub linking the portfolio pages. Built using HTML/CSS.
