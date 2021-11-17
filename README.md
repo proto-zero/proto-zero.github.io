@@ -1,9 +1,10 @@
 # The Front-End Portfolio of Sean Lenhart
+
 ## https://proto-zero.github.io/
 
 ## Folders
 
-## images
+### images
 
 A directory of the images used in the index and acting pages.
 
