@@ -1,8 +1,8 @@
-# The <a href="https://proto-zero.github.io/" target="_blank">Front-End Portfolio</a> of Sean Lenhart
+# The <a href="https://proto-zero.github.io/" target="_blank" rel="noopener">Front-End Portfolio</a> of Sean Lenhart
 
 ## Notes
 
-A collection of sites created by Sean Lenhart. The portolio links to the acting and old_chiro pages listed in this repo, as well as a <a href="https://github.com/proto-zero/new-chiro" target="_blank">new_chiro</a> page built in React and a <a href="https://github.com/proto-zero/stickynote" target="_blank">To-Do List</a> app built in Ruby on Rails.
+A collection of sites created by Sean Lenhart. The portolio links to the acting and old_chiro pages listed in this repo, as well as a <a href="https://github.com/proto-zero/new-chiro" target="_blank">new_chiro</a> page built in React and a <a href="https://github.com/proto-zero/stickynote" target="_blank" rel="noopener">To-Do List</a> app built in Ruby on Rails.
 
 ## Folders
 
@@ -10,7 +10,7 @@ A collection of sites created by Sean Lenhart. The portolio links to the acting 
 
 A directory of the images used in the index and acting pages.
 
-### <a href="https://github.com/proto-zero/proto-zero.github.io/tree/master/old_chiro" target="_blank">old_chiro</a>
+### <a href="https://github.com/proto-zero/proto-zero.github.io/tree/master/old_chiro" target="_blank" rel="noopener">old_chiro</a>
 
 File directory for Lenhart Chiropractic Clinic website, recreated from an old Wordpress layout.
 
