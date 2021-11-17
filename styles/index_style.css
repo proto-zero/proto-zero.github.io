@@ -58,6 +58,7 @@ a {
 }
 .explanation {
   font-family: 'Merriweather', serif;
+  text-align: center;
 }
 .acting {
   transition: background-image 1s ease-in-out;
@@ -174,7 +175,7 @@ strong {
   }
   .page {
     width: 77vw;
-    height: 40vh;
+    height: 40vw;
   }
   .head {
     font-size: clamp(4vw, 6vw, 7.5vw);
@@ -213,7 +214,7 @@ strong {
   }
   .page {
     width: 40vw;
-    height: 45vh;
+    height: 25vw;
   }
   .head {
     font-size: 4vw;
