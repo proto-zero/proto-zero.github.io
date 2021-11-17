@@ -2,7 +2,7 @@
 
 ## Notes
 
-A collection of sites created by Sean Lenhart. The portolio links to the acting and old_chiro pages listed in this repo, as well as a <a href="https://github.com/proto-zero/new-chiro" target="_blank">new_chiro</a> page built in React and a <a href="https://github.com/proto-zero/stickynote">To-Do List</a> app built in Ruby on Rails.
+A collection of sites created by Sean Lenhart. The portolio links to the acting and old_chiro pages listed in this repo, as well as a <a href="https://github.com/proto-zero/new-chiro">new_chiro</a> page built in React and a <a href="https://github.com/proto-zero/stickynote">To-Do List</a> app built in Ruby on Rails.
 
 ## Folders
 
