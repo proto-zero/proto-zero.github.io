@@ -6,15 +6,15 @@ A collection of sites created by Sean Lenhart. The portolio links to the acting 
 
 ## Folders
 
-### images
+### <a href="https://github.com/proto-zero/proto-zero.github.io/tree/master/images">images</a>
 
 A directory of the images used in the index and acting pages.
 
-### old_chiro
+### <a href="https://github.com/proto-zero/proto-zero.github.io/tree/master/old_chiro">old_chiro</a>
 
 File directory for Lenhart Chiropractic Clinic website, recreated from an old Wordpress layout.
 
-### styles
+### <a href="https://github.com/proto-zero/proto-zero.github.io/tree/master/styles">styles</a>
 
 The css style files for the index and acting pages.
 
