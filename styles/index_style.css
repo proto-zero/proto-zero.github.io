@@ -69,6 +69,15 @@ a {
   background-size: cover;
   text-shadow: 2px 2px 4px #121212;
 }
+.boxes {
+  transition: background-image 1s ease-in-out;
+  background-image:url("../images/bg_black.png");
+}
+.boxes:hover{
+  background-image: url("../images/boxes.png");
+  background-size: cover;
+  text-shadow: 2px 2px 4px #121212;
+}
 .ruby {
   transition: background-image 1s ease-in-out;
   background-image:url("../images/bg_blue.png");
