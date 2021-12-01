@@ -69,6 +69,15 @@ a {
   background-size: cover;
   text-shadow: 2px 2px 4px #121212;
 }
+.expense {
+  transition: background-image 1s ease-in-out;
+  background-image:url("../images/bg_indigo.png");
+}
+.expense:hover {
+  background-image: url("../images/expense.png");
+  background-size: cover;
+  text-shadow: 2px 2px 4px #121212;
+}
 .boxes {
   transition: background-image 1s ease-in-out;
   background-image:url("../images/bg_black.png");
@@ -78,18 +87,9 @@ a {
   background-size: cover;
   text-shadow: 2px 2px 4px #121212;
 }
-.ruby {
-  transition: background-image 1s ease-in-out;
-  background-image:url("../images/bg_blue.png");
-}
-.ruby:hover {
-  background-image: url("../images/ruby.png");
-  background-size: cover;
-  text-shadow: 2px 2px 4px #121212;
-}
 .old_chiro {
   transition: background-image 1s ease-in-out;
-  background-image:url("../images/bg_indigo.png");
+  background-image:url("../images/bg_blue.png");
 }
 .old_chiro:hover {
   background-image: url("../images/old_chiro.png");
@@ -98,7 +98,7 @@ a {
 }
 .new_chiro {
   transition: background-image 1s ease-in-out;
-  background-image:url("../images/bg_green.png");
+  background-image:url("../images/bg_lightblue.png");
 }
 .new_chiro:hover {
   background-image: url("../images/new_chiro.png");
@@ -107,7 +107,7 @@ a {
 }
 .github {
   transition: background-image 1s ease-in-out;
-  background-image:url("../images/bg_blue.png");
+  background-image:url("../images/bg_green.png");
 }
 .github:hover {
   background-image: url("../images/github.png");
