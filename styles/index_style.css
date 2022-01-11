@@ -14,20 +14,18 @@ body {
 .title {
   color: #E4E6EB;
   text-shadow: 2px 2px 4px #121212;
-  margin: 20px 0 0 5px;
+  margin: 40px 0 0 5px;
   font-family: 'Merriweather', serif;
 }
 .subtitle {
-  font-size: 7vw;
   color: #B3B3B3;
   color: #B03030;
   text-shadow: 2px 2px 4px #121212;
-  margin: 0 0 20px 0;
+  margin: 0 0 40px 0;
   font-family: 'Merriweather',;
   font-style: italic;
 }
 .container {
-  width: 70vw;
   display: flex;
 }
 .page {
@@ -55,6 +53,7 @@ a {
 }
 .text {
   font-family: 'Arial';
+  text-align: center
 }
 .explanation {
   font-family: 'Merriweather', serif;
@@ -169,8 +168,8 @@ strong {
   color: #B03030;
 }
 
-/* ///////////////////////////////////////// */
-
+/* ////////////////// MEDIA /////////////////////// */
+/* ////////////////// Mobile /////////////////////// */
 @media (min-width: 280px) {
   .gradient {
     width: 100vw;
@@ -178,9 +177,13 @@ strong {
   .title {
     font-size: 12vw;
   }
+  .subtitle {
+    font-size: 7vw;
+  }
   .container {
     flex-direction: column;
     align-items: center;
+    width: 70vw;
   }
   .page {
     width: 77vw;
@@ -209,31 +212,39 @@ strong {
     font-size: 4vw;
   }
 }
+/* ////////////////// Desktop /////////////////////// */
 @media (min-width: 1024px) {
   .gradient {
     width: 80vw;
     max-width: 1440px;
   }
   .title {
-    font-size: 7em;
+    font-size: 6em;
+  }
+  .subtitle {
+    font-size: 5.5em;
   }
   .container {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    width: 70vw;
+    max-width: 1440px;
   }
   .page {
     width: 40vw;
+    max-width: 720px;
     height: 25vw;
+    max-height: 450px;
   }
   .head {
-    font-size: 4vw;
+    font-size: 3em;
   }
   .text {
-    font-size: 2vw;
+    font-size: 2em;
   }
   .lede {
-    font-size: 3vw;
+    font-size: 3em;
   }
   .main_article {
     align-items: flex-start;
@@ -244,5 +255,11 @@ strong {
   }
   .info {
     font-size: 2vw;
+  }
+}
+/* ////////////////// Widescreen /////////////////////// */
+@media (min-width: 1440px) {
+  .head {
+    font-size: 4em;
   }
 }
