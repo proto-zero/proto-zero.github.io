@@ -212,9 +212,10 @@ strong {
 @media (min-width: 1024px) {
   .gradient {
     width: 80vw;
+    max-width: 1440px;
   }
   .title {
-    font-size: 9vw;
+    font-size: 7em;
   }
   .container {
     flex-direction: row;
