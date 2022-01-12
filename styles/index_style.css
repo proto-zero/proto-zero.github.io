@@ -213,39 +213,39 @@ strong {
   }
 }
 /* ////////////////// Desktop /////////////////////// */
-@media (min-width: 1024px) {
+@media (min-width: 770px) {
   .gradient {
     width: 80vw;
-    max-width: 1440px;
+    max-width: 1024px;
   }
   .title {
-    font-size: 6em;
+    font-size: 4em;
   }
   .subtitle {
-    font-size: 5.5em;
+    font-size: 3.5em;
   }
   .container {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     width: 70vw;
-    max-width: 1440px;
+    max-width: 1024px;
   }
   .page {
     width: 40vw;
-    max-width: 720px;
+    max-width: 512px;
     height: 25vw;
-    max-height: 450px;
+    max-height: 320px;
   }
   .head {
-    font-size: 3em;
+    font-size: 2em;
   }
   .text {
-    font-size: 2em;
+    font-size: 1em;
   }
   .resume_container {
     width: 80vw;
-    max-width: 1440px;
+    max-width: 1024px;
   }
   .lede {
     font-size: 3.5em;
@@ -254,16 +254,32 @@ strong {
     align-items: flex-start;
   }
   .section {
+    font-size: 2em;
+    width: 33%;
+  }
+  .info {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 964px) {
+  .title {
+    font-size: 6em;
+  }
+  .subtitle {
+    font-size: 5.5em;
+  }
+  .head {
+    font-size: 3em;
+  }
+  .text {
+    font-size: 2em;
+  }
+  .section {
     font-size: 3em;
     width: 33%;
   }
   .info {
     font-size: 2em;
-  }
-}
-/* ////////////////// Widescreen /////////////////////// */
-@media (min-width: 1440px) {
-  .head {
-    font-size: 4em;
   }
 }
