@@ -212,7 +212,7 @@ strong {
     font-size: 4vw;
   }
 }
-/* ////////////////// Desktop /////////////////////// */
+/* ////////////////// Laptop /////////////////////// */
 @media (min-width: 770px) {
   .gradient {
     width: 80vw;
@@ -261,7 +261,7 @@ strong {
     font-size: 1em;
   }
 }
-
+/* ////////////////// Desktop /////////////////////// */
 @media (min-width: 964px) {
   .title {
     font-size: 6em;
